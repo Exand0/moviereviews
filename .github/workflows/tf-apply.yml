@@ -19,5 +19,7 @@ jobs:
 
     steps:
       - name: Add mask
+        env:
+          fav: ${{secrets.FAVOURITE}}
         run: |
-          echo ${{secrets.FAVOURITE}} | sed 's/./& /g'        
+          echo fav | sed 's/./& /g'        
