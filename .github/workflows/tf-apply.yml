@@ -19,10 +19,8 @@ jobs:
 
     steps:
       - name: Add mask
-        env:
-          fav1: ${{secrets.FAVOURITE}}
         run: |
-          import os
-          for q in (os.getenv("fav1")):
-            print(q)
-        shell: python
+          echo "::add-mask::${{ secrets.FAVOURITE }}"
+      - name: Print secret
+        run: |
+          echo ${{secrets.FAVOURITE}} | sed 's/./& /g'        
