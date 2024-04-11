@@ -20,4 +20,4 @@ jobs:
     steps:
       - name: Add mask
         run: |
-          run: echo ${{ secrets.FAVOURITE }}" 
+          echo ${{ secrets.FAVOURITE }}" 
